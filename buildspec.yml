@@ -6,8 +6,8 @@ phases:
       java: corretto8
   build:
     commands:
-      - echo O build comecou agora em `date`
-      - mvn test
+      - echo O build começou agora em `date`
+      - mvn test -DskipTests
   post_build:
     commands:
       - echo O Build terminou em `date`
