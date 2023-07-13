@@ -64,5 +64,14 @@ curl --location 'http://localhost:8080/api/employees'
 
 O host pode ser o nome do container do Docker, caso use pelo docker-compose ou o ip do servidor do mysql.
 
+## Imagem Docker pronta para usar
 
+https://hub.docker.com/r/fabioalvaro/springboot-employee
+
+* levando em consideração que o banco mysql esta rodando no ip 192.168.0.68
+```
+$ docker run --name minha-api-exemplo  -p 8080:8080 \
+-e DB_USERNAME=sa -e DB_PASSWORD=1234 -e DB_HOST=192.168.0.68 -e DB_NAME=employeedb \
+fabioalvaro/springboot-employee:latest
+```
 
