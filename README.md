@@ -37,11 +37,24 @@ export DB_NAME=employeedb
 
 
 
-# Como rodar o projeto
+# Como rodar o projeto somente o java
 * necessita do banco de dados estar rodando
 ```
 $ mvn install -DskipTests
 $ mvn spring-boot:run  
+
+```
+
+# Como rodar o projeto java + Mysql (docker-compose)
+* necessita de uma rede para os dois containers
+```
+$ docker network create springmysql-net
+$ docker network ls
+
+$ docker-compose up
+
+#depois pra destruir
+$ docker-compose down
 
 ```
 
